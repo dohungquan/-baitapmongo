@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <title>Youtube Document File</title>
+</head>
+
+<body>
+
+    <form method="POST" action="/update-youtube">
+        <input type="hidden" id="youtubeId" name="youtubeId" value="<%= youtube._id %>">
+        <input type="text" id="youtubeTitle" name="youtubeTitle" value="<%= youtube.title %>">
+        <input type="text" id="youtubeChanel" name="youtubeChanel" value="<%= youtube.chanel %>">
+        <input type="text" id="youtubeView" name="youtubeView" value="<%= youtube.view %>">
+        <input type="text" id="youtubeTime" name="youtubeTime" value="<%= youtube.time %>">
+        <button type="submit">Update Youtube</button>
+    </form>
+
+    <form method="POST" action="/delete-youtube">
+        <input type="hidden" id="youtubeId" name="youtubeId" value="<%= youtube._id %>">
+        <button type="submit">Delete Youtube</button>
+    </form>
+
+    <!-- Thu vi?n jquery dã nén ph?c v? cho bootstrap.min.js  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Thu vi?n popper dã nén ph?c v? cho bootstrap.min.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
+    <!-- B?n js dã nén c?a bootstrap 4, d?t du?i cùng tru?c th? dóng body-->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

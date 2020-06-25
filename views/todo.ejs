@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>chi tiet todo</title>
+</head>
+
+<body>
+    <form method="POST" action="/update-todo">
+        <input type="hidden" id="todoId" name="todoId" value="<%= todo._id %>">
+        <input type="text" id="todoTitle" name="todoTitle" value="<%= todo.title %>">
+        <button type="submit">Update todo</button>
+    </form>
+
+    <form method="POST" action="/delete-todo">
+        <input type="hidden" id="todoId" name="todoId" value="<%= todo._id %>">
+        <button type="submit">Delete todo</button>
+    </form>
+
+</body>
+
+</html>
